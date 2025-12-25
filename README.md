@@ -1,4 +1,4 @@
-# AI-Driven Health & Welfare Enrollment Risk Prediction
+Health & Welfare Enrollment Risk Prediction
 
 ## Business Context
 Health & Welfare (HCO/H&W) operations support US employees during benefit
@@ -16,54 +16,4 @@ domain-driven assumptions.
 - Enable proactive outreach by operations teams
 - Reduce enrollment-related escalations and SLA violations
 
----
 
-## Dataset
-**IBM HR Analytics Employee Attrition Dataset (Kaggle)**
-
-Mapped to Health & Welfare domain using business logic:
-
-| HR Attribute | HCO Interpretation |
-|-------------|-------------------|
-| MonthlyIncome | Benefit affordability |
-| JobLevel | Plan eligibility tier |
-| YearsAtCompany | Enrollment familiarity |
-| OverTime | Enrollment risk indicator |
-| WorkLifeBalance | Engagement level |
-| JobSatisfaction | Enrollment attentiveness |
-
----
-
-## Feature Engineering
-- Income Band (Low / Medium / High)
-- Tenure Bucket (New Hire / Mid / Long)
-- Engagement Score
-- Overtime Risk Flag
-- Simulated Enrollment Risk (Target Variable)
-
----
-
-## Model
-- Algorithm: **XGBoost Classifier**
-- Metric Focus: **Recall & ROC-AUC**
-- ROC-AUC: ~0.85 (varies by run)
-
----
-
-## Business KPIs
-- High-risk population identification
-- Estimated reduction in missed enrollments
-- Improved SLA adherence
-- Reduced manual corrections
-
----
-
-## Deployment
-- Model persisted using pickle
-- Streamlit application for ops users
-
----
-
-## Disclaimer
-This project is a proof-of-concept using proxy data. No proprietary or confidential
-data is used.
